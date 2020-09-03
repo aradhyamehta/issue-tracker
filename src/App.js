@@ -1,10 +1,17 @@
 import React from 'react';
 import logo from './logo.svg';
 import './App.css';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faCodeBranch } from '@fortawesome/free-solid-svg-icons';
 
 function App() {
   return (
     <div className="App">
+      <div className="TopNav">
+        <h1 className="h1-style">Welcome to BugFree
+          <FontAwesomeIcon className="icon-style" icon={faCodeBranch} spin />
+        </h1>
+      </div>
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
         <p>
@@ -18,7 +25,11 @@ function App() {
         >
           Learn React
         </a>
-        <button>Does this work?</button>
+        <button
+            className="Button-style"
+          >
+            LOGIN
+          </button>
       </header>
     </div>
   );
