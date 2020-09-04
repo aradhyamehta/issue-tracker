@@ -1,33 +1,42 @@
 import React from 'react';
+import ReactDOM from 'react-dom';
 import image from "./sample.jpg";
 import './App.css';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faCodeBranch } from '@fortawesome/free-solid-svg-icons';
-
-function shoot() {
-  alert("Great Shot!");
-}
+import { Button, DatePicker } from 'antd';
+import { Layout, Breadcrumb, Menu, Typography } from 'antd';
+import 'antd/dist/antd.css';
 
 function App() {
+  
+  const { Header, Content, Footer } = Layout;
+  const { Text } = Typography;
   return (
-    <div className="App">
-      <div className="TopNav">
-        <h1 className="h1-style">Welcome to BugFree
-          <a className="click-style" href="https://github.com/aradhyamehta/issue-tracker.git"><FontAwesomeIcon className="icon-style" icon={faCodeBranch} spin /></a>
-        </h1>
+
+    <div>
+    <Layout className="layout">
+    <Header>
+      <div className="logo"/>
+      <Menu theme="dark" mode="horizontal" >
+        <Menu.Item key="1">nav 1</Menu.Item>
+        <Menu.Item key="2">nav 2</Menu.Item>
+        <Menu.Item key="3">nav 3</Menu.Item>
+      </Menu>
+    </Header>
+    <Content style={{ padding: '0 50px' }}>
+      <Breadcrumb style={{ margin: '16px 0' }}>
+        <Breadcrumb.Item>Home</Breadcrumb.Item>
+        <Breadcrumb.Item>List</Breadcrumb.Item>
+        <Breadcrumb.Item>App</Breadcrumb.Item>
+      </Breadcrumb>
+      <div className="site-layout-content">
+      <Button type="primary">PRESS ME</Button>
+    <DatePicker placeholder="select date" />
+    <Text code>BugFree is a software development tool to view & store all your programming issues.</Text>
       </div>
-      
-      <header className="App-header">
-        <div className="LeftBody">
-      <h3>BugFree is a software development tool to view & store all your programming issues.</h3>
-      <h3>BugFree is a software development tool to view & store all your programming issues.</h3>
-      <button className="button-style" onClick={shoot}>ENTER HERE</button>
+    </Content>
+    <Footer style={{ textAlign: 'center' }}>Ant Design ©2018 Created by Ant UED</Footer>
+  </Layout>
       </div>
-      <div className="RightBody">
-        <img src={image} className="App-logo" alt="logo" />
-      </div>
-      </header>
-    </div>
   );
 }
 
