@@ -2,96 +2,16 @@
   text-align: center;
 }
 
-.TopNav {
-  background-color: #333;
-  overflow: hidden;
-  min-height: 10vh;
-  width: 100%;
+.site-layout-content {
+  background: #fff;
+  padding: 24px;
+  min-height: 280px;
 }
 
-.h1-style {
-  color:#ffffff;
-}
-
-.click-style {
-  color: #ffffff;
-}
-
-.App-header {
-  background-color: #FFFFFF;
-  min-height: 80vh;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: #000000;
-  margin-top: 20px; margin-right: 20px; margin-bottom: 20px;
-}
-
-.LeftBody {
-  width: 30%;
-  height: 100%;
+.logo {
+  width: 120px;
+  height: 31px;
+  background: rgba(255, 255, 255, 0.2);
+  margin: 16px 24px 16px 0;
   float: left;
-  border-color: 2px black;
-}
-
-.button-style {
-  background-color: blue;
-  color: #ffffff;
-}
-
-.RightBody {
-  width: 70%;
-  float: left;
-  height: 100%
-}
-
-.icon-style{
-  float: right;
-  margin-right: calc(16px + 0.5vw);
-}
-
-.App-logo {
-  max-width: 100%;
-  height: auto;
-  border-radius: 8px;
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-  margin-top: 10px;
-  transition: width 2s;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-.polaroid {
-  background-color: white;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-@media only screen and (max-width: 600px) {
-  body {
-    background-color: lightblue;
-  }
-}
-
-@media only screen and (max-width: 768px) {
-  /* For mobile phones: */
-  [class*="col-"] {
-    width: 100%;
-  }
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
 }
