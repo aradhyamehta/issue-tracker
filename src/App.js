@@ -1,8 +1,7 @@
 import React from 'react';
-import sample from "./sample.jpg";
 import './App.css';
 import { Button, DatePicker } from 'antd';
-import { Layout, Breadcrumb, Menu, Typography, Image } from 'antd';
+import { Layout, Breadcrumb, Menu, Typography } from 'antd';
 import 'antd/dist/antd.css';
 
 function App() {
@@ -31,9 +30,6 @@ function App() {
       <Button type="primary">PRESS ME</Button>
     <DatePicker placeholder="select date" />
     <Text code>BugFree is a software development tool to view & store all your programming issues.</Text>
-    <Image
-      src={sample}
-    />
       </div>
     </Content>
     <Footer style={{ textAlign: 'center' }}>Ant Design ©2018 Created by Ant UED</Footer>
