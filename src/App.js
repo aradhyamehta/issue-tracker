@@ -1,9 +1,8 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
-import image from "./sample.jpg";
+import sample from "./sample.jpg";
 import './App.css';
 import { Button, DatePicker } from 'antd';
-import { Layout, Breadcrumb, Menu, Typography } from 'antd';
+import { Layout, Breadcrumb, Menu, Typography, Image } from 'antd';
 import 'antd/dist/antd.css';
 
 function App() {
@@ -14,7 +13,7 @@ function App() {
 
     <div>
     <Layout className="layout">
-    <Header>
+    <Header style={{ position: 'fixed', zIndex: 1, width: '100%' }}>
       <div className="logo"/>
       <Menu theme="dark" mode="horizontal" >
         <Menu.Item key="1">nav 1</Menu.Item>
@@ -22,7 +21,7 @@ function App() {
         <Menu.Item key="3">nav 3</Menu.Item>
       </Menu>
     </Header>
-    <Content style={{ padding: '0 50px' }}>
+    <Content className="site-layout" style={{ padding: '0 50px', marginTop: 64 }}>
       <Breadcrumb style={{ margin: '16px 0' }}>
         <Breadcrumb.Item>Home</Breadcrumb.Item>
         <Breadcrumb.Item>List</Breadcrumb.Item>
@@ -32,6 +31,9 @@ function App() {
       <Button type="primary">PRESS ME</Button>
     <DatePicker placeholder="select date" />
     <Text code>BugFree is a software development tool to view & store all your programming issues.</Text>
+    <Image
+      src={sample}
+    />
       </div>
     </Content>
     <Footer style={{ textAlign: 'center' }}>Ant Design ©2018 Created by Ant UED</Footer>
