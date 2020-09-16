@@ -12,9 +12,6 @@ function App() {
     <div>
     <Button type="primary">PRESS ME</Button>
     <DatePicker placeholder="select date" />
-    <Layout className="layout">
-    <Footer style={{ textAlign: 'center' }}>Ant Design ©2018 Created by Ant UED</Footer>
-  </Layout>
       </div>
   );
 }
