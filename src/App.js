@@ -1,12 +1,12 @@
 import React from 'react';
 import './App.css';
 import { Button, DatePicker } from 'antd';
-import { Layout, Breadcrumb, Menu, Typography } from 'antd';
+import { Layout, Breadcrumb, Typography } from 'antd';
 import 'antd/dist/antd.css';
 
 function App() {
   
-  const { Header, Content, Footer } = Layout;
+  const { Content, Footer } = Layout;
   const { Text } = Typography;
   return (
 
