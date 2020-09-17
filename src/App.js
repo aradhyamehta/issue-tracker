@@ -1,21 +1,34 @@
 import React from 'react';
 import './App.css';
-import { Button, Input } from 'antd';
+import { Button, Input, Row, Col } from 'antd';
 import 'antd/dist/antd.css';
+import { SearchOutlined, DeleteTwoTone } from '@ant-design/icons';
 
 function App() {
   
   return (
 
     <div>
-      <Input placeholder="Add issue" />
+      <Row>
+    <Col xs={6} sm={6} md={6} lg={6} xl={6}>
+    <Input placeholder="Add issue" />
       <Button type="dashed">Create</Button>
-      <Input placeholder="Read issue" />
+      <SearchOutlined style={{ fontSize: "30px" }} />
+    </Col>
+    <Col xs={6} sm={6} md={6} lg={6} xl={6}>
+    <Input placeholder="Read issue" />
       <Button type="dashed">Read</Button>
-      <Input placeholder="Update issue" />
+    </Col>
+    <Col xs={6} sm={6} md={6} lg={6} xl={6}>
+    <Input placeholder="Update issue" />
       <Button type="dashed">Update</Button>
-      <Input placeholder="Delete issue" />
+    </Col>
+    <Col xs={6} sm={6} md={6} lg={6} xl={6}>
+    <Input placeholder="Delete issue" />
       <Button type="dashed">Delete</Button>
+      <DeleteTwoTone style={{ fontSize: "30px" }} />
+    </Col>
+  </Row>
     </div>
   );
 }
