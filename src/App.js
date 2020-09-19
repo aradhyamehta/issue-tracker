@@ -1,35 +1,63 @@
 import React from 'react';
 import './App.css';
-import { Button, Input, Row, Col } from 'antd';
-import 'antd/dist/antd.css';
-import { SearchOutlined, DeleteTwoTone } from '@ant-design/icons';
+import Button from '@material-ui/core/Button';
+import { makeStyles } from '@material-ui/core/styles';
+import Paper from '@material-ui/core/Paper';
+import Grid from '@material-ui/core/Grid';
+import DeleteIcon from '@material-ui/icons/Delete';
+
+const useStyles = makeStyles((theme) => ({
+  root: {
+    flexGrow: 1,
+  },
+  paper: {
+    padding: theme.spacing(2),
+    textAlign: 'center',
+    color: theme.palette.text.secondary,
+  },
+}));
 
 function App() {
+  const classes = useStyles();
   
   return (
 
-    <div>
-      <Row>
-    <Col xs={6} sm={6} md={6} lg={6} xl={6}>
-    <Input placeholder="Add issue" />
-      <Button type="dashed">Create</Button>
-      <SearchOutlined style={{ fontSize: "30px" }} />
-    </Col>
-    <Col xs={6} sm={6} md={6} lg={6} xl={6}>
-    <Input placeholder="Read issue" />
-      <Button type="dashed">Read</Button>
-    </Col>
-    <Col xs={6} sm={6} md={6} lg={6} xl={6}>
-    <Input placeholder="Update issue" />
-      <Button type="dashed">Update</Button>
-    </Col>
-    <Col xs={6} sm={6} md={6} lg={6} xl={6}>
-    <Input placeholder="Delete issue" />
-      <Button type="dashed">Delete</Button>
-      <DeleteTwoTone style={{ fontSize: "30px" }} />
-    </Col>
-  </Row>
-    </div>
+  <div className={classes.root}>
+    <Grid container spacing={3}>
+      <Grid item xs={12}>
+        <Paper className={classes.paper}>xs=12</Paper>
+      </Grid>
+      <Grid item xs={12} sm={6}>
+        <Paper className={classes.paper}>xs=12 sm=6</Paper>
+      </Grid>
+      <Grid item xs={12} sm={6}>
+        <Paper className={classes.paper}>xs=12 sm=6</Paper>
+      </Grid>
+      <Grid item xs={6} sm={3}>
+        <Paper className={classes.paper}>
+          <Button variant="contained" color="primary">Hello World</Button>
+        </Paper>
+      </Grid>
+      <Grid item xs={6} sm={3}>
+        <Paper className={classes.paper}>
+          <Button variant="contained" color="primary">Hello World</Button>
+        </Paper>
+      </Grid>
+      <Grid item xs={6} sm={3}>
+        <Paper className={classes.paper}>
+          <Button variant="contained" color="primary">Hello World</Button>
+        </Paper>
+      </Grid>
+      <Grid item xs={6} sm={3}>
+        <Paper className={classes.paper}>
+          <Button variant="contained" color="primary">
+            Hello World
+            <DeleteIcon color="secondary" />
+          </Button>
+        </Paper>
+      </Grid>
+    </Grid>
+  </div>
   );
 }
 
